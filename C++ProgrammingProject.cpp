@@ -26,7 +26,7 @@ int main()
     // Calculating the number of customers preferring citrus-flavored energy drinks
     citrusflavorCustomer = energyDrinkCustomer * PERCENTAGE_CITRUS_FLAVOR;
 
-    //Display the result
+    //Displaying the results
     cout << "The approximate number of customers in the survey:  \n";
     cout << " 1. Purchasing one or more energy drinks per week: " << energyDrinkCustomer << endl;
     cout << " 2. Preferring citrus-flavored energy drinks: " << citrusflavorCustomer << endl;
