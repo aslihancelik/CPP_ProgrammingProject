@@ -1,20 +1,36 @@
-// C++ProgrammingProject.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Programmer: Aslihan Celik
+// 
+// C++ProgrammingProject.cpp : This program calculates and displays the distance the car
+// can travel on one tank of gas when driven in town and when driven on highway.
 //
 
 #include <iostream>
+using namespace std;
+
+// Function to calculate the distance a car can travel on one full tank of gas
+// Takes two parameters: gasTank (size of the gas tank) and averageMilesPerGallon (miles the car travels per gallon)
+// Returns the total distance the car can travel
+
+double distance( const double gasTank, const double averageMilesPerGallon)
+{
+    return gasTank * averageMilesPerGallon;
+}
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    // Constants for the car's gas tank size and fuel efficiency (miles per gallon) in town and on the highway
+    const double tankSize = 20.0, TOWN_MILES_PER_GALLON = 23.5, HIGHWAY_MILES_PER_GALLON = 28.9;
+
+    double town_distance, highway_distance;
+
+    //Calculating the distance that car can travel on one full tank in town
+    town_distance = distance(tankSize, TOWN_MILES_PER_GALLON);
+
+    //Calculating the distance that car can travel on one full tank on highway
+    highway_distance = distance(tankSize, HIGHWAY_MILES_PER_GALLON);
+
+    cout << "The distance that a car with a " << tankSize << " gallon gas tank can travel in town is " << town_distance << " miles. \n";
+    cout << "The distance that a car with a " << tankSize << " gallon gas tank can travel on the highway is " << highway_distance << " miles. \n";
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
