@@ -11,7 +11,7 @@ using namespace std;
 // Takes two parameters: gasTank (size of the gas tank) and averageMilesPerGallon (miles the car travels per gallon)
 // Returns the total distance the car can travel
 
-double distance( const double gasTank, const double averageMilesPerGallon)
+double calculateDistance( const double gasTank, const double averageMilesPerGallon)
 {
     return gasTank * averageMilesPerGallon;
 }
@@ -25,10 +25,10 @@ int main()
     double town_distance, highway_distance;
 
     //Calculating the distance that car can travel on one full tank in town
-    town_distance = distance(TANK_SIZE, TOWN_MILES_PER_GALLON);
+    town_distance = calculateDistance(TANK_SIZE, TOWN_MILES_PER_GALLON);
 
     //Calculating the distance that car can travel on one full tank on highway
-    highway_distance = distance(TANK_SIZE, HIGHWAY_MILES_PER_GALLON);
+    highway_distance = calculateDistance(TANK_SIZE, HIGHWAY_MILES_PER_GALLON);
 
     cout << "The distance that a car with a " << TANK_SIZE << " gallon gas tank can travel in town is " << town_distance << " miles. \n";
     cout << "The distance that a car with a " << TANK_SIZE << " gallon gas tank can travel on the highway is " << highway_distance << " miles. \n";
