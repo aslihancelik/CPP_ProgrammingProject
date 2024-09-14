@@ -3,6 +3,7 @@
 // 1) Purchase one or more energy drinks per week
 // 2) Preferring citrus-flavored energy drinks
 //
+//Programmer: Aslihan Celik
 
 #include <iostream>
 using namespace std;
